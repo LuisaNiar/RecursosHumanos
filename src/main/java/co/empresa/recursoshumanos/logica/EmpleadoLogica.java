@@ -24,7 +24,6 @@ public class EmpleadoLogica {
     public void guardarEmpleado(EmpleadoDTO empleadoDTO) {
         Empleado empleadoBD = new Empleado();
 
-        empleadoBD.setID(empleadoDTO.getID());
         empleadoBD.setNombre(empleadoDTO.getNombre());
         empleadoBD.setApellido(empleadoDTO.getApellido());
         empleadoBD.setCedula(empleadoDTO.getCedula());
