@@ -3,6 +3,7 @@ package co.empresa.recursoshumanos.persistencia;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 
 @Entity
@@ -14,7 +15,6 @@ public class Empleado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-
     private int ID;
 
     @Column
@@ -38,5 +38,10 @@ public class Empleado {
     @Column
     private int vacaciones;
 
+    @OneToMany(mappedBy = "certificado", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Certificado> certificados;
+
+    @OneToMany(mappedBy = "perfil_empleado", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<PerfilEmpleado> perfilEmpleados;
 
 }
