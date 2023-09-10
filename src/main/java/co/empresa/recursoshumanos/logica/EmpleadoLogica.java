@@ -5,7 +5,6 @@ import co.empresa.recursoshumanos.persistencia.Empleado;
 import co.empresa.recursoshumanos.persistencia.EmpleadoRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service

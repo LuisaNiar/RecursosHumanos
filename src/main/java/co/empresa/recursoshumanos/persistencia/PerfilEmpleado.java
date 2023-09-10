@@ -2,10 +2,7 @@ package co.empresa.recursoshumanos.persistencia;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 
 @Entity
@@ -16,6 +13,7 @@ public class PerfilEmpleado {
 
     @Id
     @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ID;
 
     @Column
@@ -24,8 +22,10 @@ public class PerfilEmpleado {
     @Column
     private String Habilidades;
 
+    @ManyToOne()
+    @JoinColumn(name = "id_empleado")
     @Column
-    private int IdEmpleado;
+    private Empleado empleado;
 
 
 
