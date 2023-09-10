@@ -5,8 +5,6 @@ import lombok.Data;
 @Data
 public class EmpleadoDTO {
 
-    private int ID;
-
     private String Nombre;
 
     private String Apellido;
