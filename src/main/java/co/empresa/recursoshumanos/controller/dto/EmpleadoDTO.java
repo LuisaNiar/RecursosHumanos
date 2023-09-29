@@ -5,18 +5,20 @@ import lombok.Data;
 @Data
 public class EmpleadoDTO {
 
-    private String Nombre;
+    private String nombre;
 
-    private String Apellido;
+    private String apellido;
 
-    private int Cedula;
+    private int cedula;
 
-    private int Telefono;
+    private long telefono;
 
-    private String Puesto;
+    private String puesto;
 
-    private int Salario;
+    private int salario;
 
     private int vacaciones;
+
+    private Boolean eliminado;
 
 }

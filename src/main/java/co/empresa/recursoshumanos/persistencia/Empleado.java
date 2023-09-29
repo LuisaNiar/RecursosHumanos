@@ -4,44 +4,50 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.List;
-
+import com.fasterxml.jackson.annotation.*;
 
 @Entity
 @Table
 @Data
 
-public class Empleado {
+public class Empleado{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private int ID;
+    private int id;
 
     @Column
-    private String Nombre;
+    private String nombre;
 
     @Column
-    private String Apellido;
+    private String apellido;
 
     @Column
-    private int Cedula;
+    private int cedula;
 
     @Column
-    private int Telefono;
+    private long telefono;
 
     @Column
-    private String Puesto;
+    private String puesto;
 
     @Column
-    private int Salario;
+    private int salario;
 
     @Column
     private int vacaciones;
 
-    @OneToMany(mappedBy = "certificado", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Column
+    private boolean eliminado;
+
+    @OneToMany(mappedBy = "empleado", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<Certificado> certificados;
 
-    @OneToMany(mappedBy = "perfil_empleado", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<PerfilEmpleado> perfilEmpleados;
+
+    @OneToOne(mappedBy = "empleado", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @JsonManagedReference
+    private PerfilEmpleado perfilempleado;
 
 }

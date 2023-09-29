@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 public class CertificadoDTO {
 
-    private String Certificados;
+    private String certificados;
 
-    private int IdEmpleado;
+    private int idempleado;
 }

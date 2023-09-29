@@ -1,8 +1,8 @@
 package co.empresa.recursoshumanos.persistencia;
 
 import lombok.Data;
-
 import javax.persistence.*;
+import com.fasterxml.jackson.annotation.*;
 
 @Entity
 @Table
@@ -13,14 +13,14 @@ public class Certificado {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int ID;
+    private int id;
 
     @Column
-    private String Certificados;
+    private String certificados;
 
     @ManyToOne()
     @JoinColumn(name = "id_empleado")
-    @Column
+    @JsonBackReference
     private Empleado empleado;
 
 }

@@ -1,8 +1,8 @@
 package co.empresa.recursoshumanos.persistencia;
 
 import lombok.Data;
-
 import javax.persistence.*;
+import com.fasterxml.jackson.annotation.*;
 
 
 @Entity
@@ -22,9 +22,9 @@ public class PerfilEmpleado {
     @Column
     private String Habilidades;
 
-    @ManyToOne()
     @JoinColumn(name = "id_empleado")
-    @Column
+    @OneToOne(fetch = FetchType.LAZY)
+    @JsonBackReference
     private Empleado empleado;
 
 

@@ -5,9 +5,9 @@ import lombok.Data;
 @Data
 public class PerfilEmpleadoDTO {
 
-    private int Tiempo;
+    private int tiempo;
 
-    private String Habilidades;
+    private String habilidades;
 
-    private int IdEmpleado;
+    private int idempleado;
 }

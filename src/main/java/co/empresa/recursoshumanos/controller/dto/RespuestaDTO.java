@@ -1,5 +1,8 @@
 package co.empresa.recursoshumanos.controller.dto;
 
+import lombok.Data;
+
+@Data
 public class RespuestaDTO {
 
     String mensaje;
@@ -8,14 +11,4 @@ public class RespuestaDTO {
         this.mensaje = mensaje;
     }
 
-    public RespuestaDTO() {
-    }
-
-    public String getMensaje() {
-        return mensaje;
-    }
-
-    public void setMensaje(String mensaje) {
-        this.mensaje = mensaje;
-    }
 }

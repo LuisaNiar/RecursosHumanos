@@ -4,10 +4,8 @@ import co.empresa.recursoshumanos.controller.dto.EmpleadoDTO;
 import co.empresa.recursoshumanos.controller.dto.RespuestaDTO;
 import co.empresa.recursoshumanos.logica.EmpleadoLogica;
 import co.empresa.recursoshumanos.persistencia.Empleado;
-import co.empresa.recursoshumanos.persistencia.EmpleadoRepository;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -35,17 +33,17 @@ public class EmpleadoController {
 
     }
 
-    @PutMapping(path = "/empleado/actualizar/{Id}")
-    public RespuestaDTO actualizarEmpleado(@RequestBody EmpleadoDTO empleadoDTO, @PathVariable int Id) {
+    @PutMapping(path = "/empleado/actualizar/{id}")
+    public RespuestaDTO actualizarEmpleado(@RequestBody EmpleadoDTO empleadoDTO, @PathVariable int id) {
         try {
-            empleadoLogica.actualizarEmpleado(empleadoDTO, Id);
+            empleadoLogica.actualizarEmpleado(empleadoDTO, id);
             return new RespuestaDTO("Empleado actualizado correctamente");
         } catch (IllegalArgumentException e) {
             return new RespuestaDTO("Empleado no se pudo actualizar " + e.getMessage());
         }
     }
 
-    @RequestMapping(path = "/empleado/eliminar/{id}", method = RequestMethod.DELETE)
+    @PostMapping(path = "/empleado/eliminar/{id}")
     public RespuestaDTO eliminarEmpleado(@PathVariable int id) {
         try {
             empleadoLogica.eliminarEmpleado(id);

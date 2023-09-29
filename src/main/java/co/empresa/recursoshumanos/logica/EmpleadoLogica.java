@@ -22,31 +22,37 @@ public class EmpleadoLogica {
     }
 
     public void guardarEmpleado(EmpleadoDTO empleadoDTO) {
-        Empleado empleadoBD = new Empleado();
-        empleadoBD.setNombre(empleadoDTO.getNombre());
-        empleadoBD.setApellido(empleadoDTO.getApellido());
-        empleadoBD.setCedula(empleadoDTO.getCedula());
-        empleadoBD.setTelefono(empleadoDTO.getTelefono());
-        empleadoBD.setPuesto(empleadoDTO.getPuesto());
-        empleadoBD.setSalario(empleadoDTO.getSalario());
-        empleadoBD.setVacaciones(empleadoDTO.getVacaciones());
-        empleadoRepository.save(empleadoBD);
+        Empleado empleadoGuardado = new Empleado();
+        empleadoGuardado.setNombre(empleadoDTO.getNombre());
+        empleadoGuardado.setApellido(empleadoDTO.getApellido());
+        empleadoGuardado.setCedula(empleadoDTO.getCedula());
+        empleadoGuardado.setTelefono(empleadoDTO.getTelefono());
+        empleadoGuardado.setPuesto(empleadoDTO.getPuesto());
+        empleadoGuardado.setSalario(empleadoDTO.getSalario());
+        empleadoGuardado.setVacaciones(empleadoDTO.getVacaciones());
+        empleadoRepository.save(empleadoGuardado);
     }
 
-    public void actualizarEmpleado(EmpleadoDTO empleadoDTO, int Id) {
-        Optional<Empleado> empleado = this.empleadoRepository.findById(Id);
-        Empleado empleadoBD = empleado.get();
-        empleadoBD.setNombre(empleadoDTO.getNombre());
-        empleadoBD.setApellido(empleadoDTO.getApellido());
-        empleadoBD.setCedula(empleadoDTO.getCedula());
-        empleadoBD.setTelefono(empleadoDTO.getTelefono());
-        empleadoBD.setPuesto(empleadoDTO.getPuesto());
-        empleadoBD.setSalario(empleadoDTO.getSalario());
-        empleadoBD.setVacaciones(empleadoDTO.getVacaciones());
+    public void actualizarEmpleado(EmpleadoDTO empleadoDTO, int id) {
+
+        Optional<Empleado> empleado = this.empleadoRepository.findById(id);
+        Empleado empleadoActualizado = empleado.orElse(null);
+        empleadoActualizado.setNombre(empleadoDTO.getNombre());
+        empleadoActualizado.setApellido(empleadoDTO.getApellido());
+        empleadoActualizado.setCedula(empleadoDTO.getCedula());
+        empleadoActualizado.setTelefono(empleadoDTO.getTelefono());
+        empleadoActualizado.setPuesto(empleadoDTO.getPuesto());
+        empleadoActualizado.setSalario(empleadoDTO.getSalario());
+        empleadoActualizado.setVacaciones(empleadoDTO.getVacaciones());
+        empleadoRepository.save(empleadoActualizado);
 
     }
 
     public void eliminarEmpleado(int id) {
-        empleadoRepository.deleteById(id);
+        Optional<Empleado> empleado = this.empleadoRepository.findById(id);
+        Empleado empleadoEliminado = empleado.orElse(null);
+        assert empleadoEliminado != null;
+        empleadoEliminado.setEliminado(true);
+        empleadoRepository.save(empleadoEliminado);
     }
 }
