@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "7b283ce7-d9bc-4031-b24a-c3122ee8fdf6",
+		"name": "Recursos Humanos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29540382"
+	},
+	"item": [
+		{
+			"name": "Empleados",
+			"item": [
+				{
+					"name": "Ver Empleados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/empleado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"empleado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Empleado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Audrey\",\r\n    \"apellido\": \"Hall\",\r\n    \"cedula\": 1623748902,\r\n    \"telefono\": 3112738902,\r\n    \"puesto\": \"Terapeuta\",\r\n    \"salario\": 14000000,\r\n    \"vacaciones\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/empleado/agregar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"empleado",
+								"agregar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Empleado",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"Pepe\",\r\n        \"apellido\": \"Ramirez\",\r\n        \"cedula\": 146592315,\r\n        \"telefono\": 322659856,\r\n        \"puesto\": \"Concerje\",\r\n        \"salario\": 1300000,\r\n        \"vacaciones\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/empleado/actualizar/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"empleado",
+								"actualizar",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Empleado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/empleado/eliminar/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"empleado",
+								"eliminar",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Todos los comandos relacionados con la tabla de empleados disponibles a la fecha"
+		},
+		{
+			"name": "Ver Perfil Empleados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/empleado/perfilesempleados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"empleado",
+						"perfilesempleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver Certificados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/empleado/certificados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"empleado",
+						"certificados"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
