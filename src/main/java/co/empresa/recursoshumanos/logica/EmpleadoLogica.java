@@ -30,6 +30,7 @@ public class EmpleadoLogica {
         empleadoGuardado.setPuesto(empleadoDTO.getPuesto());
         empleadoGuardado.setSalario(empleadoDTO.getSalario());
         empleadoGuardado.setVacaciones(empleadoDTO.getVacaciones());
+        empleadoGuardado.setEliminado(false);
         empleadoRepository.save(empleadoGuardado);
     }
 
