@@ -38,15 +38,19 @@ public class EmpleadoLogica {
 
         Optional<Empleado> empleado = this.empleadoRepository.findById(id);
         Empleado empleadoActualizado = empleado.orElse(null);
-        empleadoActualizado.setNombre(empleadoDTO.getNombre());
-        empleadoActualizado.setApellido(empleadoDTO.getApellido());
-        empleadoActualizado.setCedula(empleadoDTO.getCedula());
-        empleadoActualizado.setTelefono(empleadoDTO.getTelefono());
-        empleadoActualizado.setPuesto(empleadoDTO.getPuesto());
-        empleadoActualizado.setSalario(empleadoDTO.getSalario());
-        empleadoActualizado.setVacaciones(empleadoDTO.getVacaciones());
-        empleadoRepository.save(empleadoActualizado);
-
+        assert empleadoActualizado != null;
+        if (empleadoActualizado.isEliminado()) {
+            throw new IllegalArgumentException("No sepuede esditar estudiantes eliminados");
+        } else {
+            empleadoActualizado.setNombre(empleadoDTO.getNombre());
+            empleadoActualizado.setApellido(empleadoDTO.getApellido());
+            empleadoActualizado.setCedula(empleadoDTO.getCedula());
+            empleadoActualizado.setTelefono(empleadoDTO.getTelefono());
+            empleadoActualizado.setPuesto(empleadoDTO.getPuesto());
+            empleadoActualizado.setSalario(empleadoDTO.getSalario());
+            empleadoActualizado.setVacaciones(empleadoDTO.getVacaciones());
+            empleadoRepository.save(empleadoActualizado);
+        }
     }
 
     public void eliminarEmpleado(int id) {
