@@ -40,7 +40,6 @@ tasks.jacocoTestReport{
     reports{
         csv.required.set(true)
     }
-
 }
 jacoco{
     toolVersion = "0.8.8"
