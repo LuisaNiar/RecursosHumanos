@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7b283ce7-d9bc-4031-b24a-c3122ee8fdf6",
+		"_postman_id": "70fee584-61bd-4623-a222-a45f8744329f",
 		"name": "Recursos Humanos",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "29540382"
@@ -35,7 +35,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Audrey\",\r\n    \"apellido\": \"Hall\",\r\n    \"cedula\": 1623748902,\r\n    \"telefono\": 3112738902,\r\n    \"puesto\": \"Terapeuta\",\r\n    \"salario\": 14000000,\r\n    \"vacaciones\": 3\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Bruno\",\r\n    \"apellido\": \"Diaz\",\r\n    \"cedula\": 1237456320,\r\n    \"telefono\": 3012635427,\r\n    \"puesto\": \"CEO de Industrias Diaz\",\r\n    \"salario\": 50000000,\r\n    \"vacaciones\": 0\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -75,7 +75,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"nombre\": \"Pepe\",\r\n        \"apellido\": \"Ramirez\",\r\n        \"cedula\": 146592315,\r\n        \"telefono\": 322659856,\r\n        \"puesto\": \"Concerje\",\r\n        \"salario\": 1300000,\r\n        \"vacaciones\": 5\r\n}",
+							"raw": "{\r\n        \"nombre\": \"Pepe\",\r\n        \"apellido\": \"Sierra\",\r\n        \"cedula\": 146592315,\r\n        \"telefono\": 322659856,\r\n        \"puesto\": \"Concejero\",\r\n        \"salario\": 1300000,\r\n        \"vacaciones\": 15\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -104,7 +104,7 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/empleado/eliminar/4",
+							"raw": "http://localhost:8080/empleado/eliminar/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -113,7 +113,7 @@
 							"path": [
 								"empleado",
 								"eliminar",
-								"4"
+								"2"
 							]
 						}
 					},

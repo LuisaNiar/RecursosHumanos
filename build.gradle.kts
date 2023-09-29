@@ -21,6 +21,20 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("mysql:mysql-connector-java:8.0.32")
     implementation("com.fasterxml.jackson.core:jackson-annotations:2.15.2")
+    implementation("org.springframework.boot:spring-boot-starter:3.1.2")
+    implementation("io.springfox:springfox-boot-starter:3.0.0")
+    implementation("io.springfox:springfox-swagger2:3.0.0")
+    implementation("io.springfox:springfox-swagger-ui:3.0.0")
+
+
+    /*
+    implementation("org.springdoc:springdoc-openapi-data-rest:1.6.11")
+    implementation("org.springdoc:springdoc-openapi-ui:1.6.11")
+    implementation("org.springdoc:springdoc-openapi-kotlin:1.6.11")
+
+    implementation("io.springfox:springfox-swagger2:3.0.0")
+
+     */
     compileOnly ("org.projectlombok:lombok:1.18.28")
     annotationProcessor ("org.projectlombok:lombok:1.18.28")
     testCompileOnly ("org.projectlombok:lombok:1.18.28")
