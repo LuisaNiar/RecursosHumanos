@@ -25,20 +25,10 @@ dependencies {
     implementation("io.springfox:springfox-boot-starter:3.0.0")
     implementation("io.springfox:springfox-swagger2:3.0.0")
     implementation("io.springfox:springfox-swagger-ui:3.0.0")
-
-
-    /*
-    implementation("org.springdoc:springdoc-openapi-data-rest:1.6.11")
-    implementation("org.springdoc:springdoc-openapi-ui:1.6.11")
-    implementation("org.springdoc:springdoc-openapi-kotlin:1.6.11")
-
-    implementation("io.springfox:springfox-swagger2:3.0.0")
-
-     */
-    compileOnly ("org.projectlombok:lombok:1.18.28")
-    annotationProcessor ("org.projectlombok:lombok:1.18.28")
-    testCompileOnly ("org.projectlombok:lombok:1.18.28")
-    testAnnotationProcessor ("org.projectlombok:lombok:1.18.28")
+    compileOnly("org.projectlombok:lombok:1.18.28")
+    annotationProcessor("org.projectlombok:lombok:1.18.28")
+    testCompileOnly("org.projectlombok:lombok:1.18.28")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.28")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
 }
@@ -46,16 +36,18 @@ dependencies {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
-tasks.test{
+
+tasks.test {
     finalizedBy(tasks.jacocoTestReport)
 }
-tasks.jacocoTestReport{
+
+tasks.jacocoTestReport {
     dependsOn(tasks.test)
-    reports{
+    reports {
         csv.required.set(true)
     }
 
 }
-jacoco{
+jacoco {
     toolVersion = "0.8.8"
 }
