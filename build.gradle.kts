@@ -16,6 +16,8 @@ repositories {
     mavenCentral()
 }
 
+
+
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
@@ -30,7 +32,6 @@ dependencies {
     testCompileOnly("org.projectlombok:lombok:1.18.28")
     testAnnotationProcessor("org.projectlombok:lombok:1.18.28")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-
 }
 
 tasks.withType<Test> {
