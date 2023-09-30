@@ -46,8 +46,21 @@ tasks.jacocoTestReport {
     reports {
         csv.required.set(true)
     }
-
 }
+
+tasks.withType<JacocoReport> {
+
+    classDirectories.setFrom(
+            sourceSets.main.get().output.asFileTree.matching {
+                exclude("**/config/**")
+                exclude("**/dto/**")
+                exclude("**/persistencia/**")
+            }
+    )
+}
+
+
+
 jacoco {
     toolVersion = "0.8.8"
 }
