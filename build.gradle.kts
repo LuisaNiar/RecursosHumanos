@@ -21,10 +21,14 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("mysql:mysql-connector-java:8.0.32")
     implementation("com.fasterxml.jackson.core:jackson-annotations:2.15.2")
-    compileOnly ("org.projectlombok:lombok:1.18.28")
-    annotationProcessor ("org.projectlombok:lombok:1.18.28")
-    testCompileOnly ("org.projectlombok:lombok:1.18.28")
-    testAnnotationProcessor ("org.projectlombok:lombok:1.18.28")
+    implementation("org.springframework.boot:spring-boot-starter:3.1.2")
+    implementation("io.springfox:springfox-boot-starter:3.0.0")
+    implementation("io.springfox:springfox-swagger2:3.0.0")
+    implementation("io.springfox:springfox-swagger-ui:3.0.0")
+    compileOnly("org.projectlombok:lombok:1.18.28")
+    annotationProcessor("org.projectlombok:lombok:1.18.28")
+    testCompileOnly("org.projectlombok:lombok:1.18.28")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.28")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
 }
@@ -32,16 +36,31 @@ dependencies {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
-tasks.test{
+
+tasks.test {
     finalizedBy(tasks.jacocoTestReport)
 }
-tasks.jacocoTestReport{
+
+tasks.jacocoTestReport {
     dependsOn(tasks.test)
-    reports{
+    reports {
         csv.required.set(true)
     }
-
 }
-jacoco{
+
+tasks.withType<JacocoReport> {
+
+    classDirectories.setFrom(
+            sourceSets.main.get().output.asFileTree.matching {
+                exclude("**/config/**")
+                exclude("**/dto/**")
+                exclude("**/persistencia/**")
+            }
+    )
+}
+
+
+
+jacoco {
     toolVersion = "0.8.8"
 }
