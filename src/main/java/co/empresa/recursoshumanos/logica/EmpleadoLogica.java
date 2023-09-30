@@ -21,7 +21,7 @@ public class EmpleadoLogica {
         return empleadoRepository.findAll();
     }
 
-    public void guardarEmpleado(EmpleadoDTO empleadoDTO) {
+    public Empleado guardarEmpleado(EmpleadoDTO empleadoDTO) {
         Empleado empleadoGuardado = new Empleado();
         empleadoGuardado.setNombre(empleadoDTO.getNombre());
         empleadoGuardado.setApellido(empleadoDTO.getApellido());
@@ -32,15 +32,16 @@ public class EmpleadoLogica {
         empleadoGuardado.setVacaciones(empleadoDTO.getVacaciones());
         empleadoGuardado.setEliminado(false);
         empleadoRepository.save(empleadoGuardado);
+        return empleadoGuardado;
     }
 
-    public void actualizarEmpleado(EmpleadoDTO empleadoDTO, int id) {
+    public Empleado actualizarEmpleado(EmpleadoDTO empleadoDTO, int id) {
 
         Optional<Empleado> empleado = this.empleadoRepository.findById(id);
         Empleado empleadoActualizado = empleado.orElse(null);
-        assert empleadoActualizado != null;
+
         if (empleadoActualizado.isEliminado()) {
-            throw new IllegalArgumentException("No sepuede esditar estudiantes eliminados");
+            throw new IllegalArgumentException("No se puede editar empleados eliminados");
         } else {
             empleadoActualizado.setNombre(empleadoDTO.getNombre());
             empleadoActualizado.setApellido(empleadoDTO.getApellido());
@@ -51,13 +52,15 @@ public class EmpleadoLogica {
             empleadoActualizado.setVacaciones(empleadoDTO.getVacaciones());
             empleadoRepository.save(empleadoActualizado);
         }
+        return empleadoActualizado;
     }
 
-    public void eliminarEmpleado(int id) {
+    public Empleado eliminarEmpleado(int id) {
         Optional<Empleado> empleado = this.empleadoRepository.findById(id);
         Empleado empleadoEliminado = empleado.orElse(null);
         assert empleadoEliminado != null;
         empleadoEliminado.setEliminado(true);
         empleadoRepository.save(empleadoEliminado);
+        return empleadoEliminado;
     }
 }
