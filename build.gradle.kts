@@ -3,6 +3,7 @@ plugins {
     id("org.springframework.boot") version "2.7.15"
     id("io.spring.dependency-management") version "1.0.15.RELEASE"
     jacoco
+    id("org.sonarqube") version "4.4.1.3373"
 }
 
 group = "co.empresa"
@@ -50,4 +51,14 @@ tasks.jacocoTestReport {
 }
 jacoco {
     toolVersion = "0.8.8"
+}
+
+sonarqube {
+
+    properties {
+
+        property("sonar.recursoshumanos", "yms-gate")
+
+    }
+
 }
