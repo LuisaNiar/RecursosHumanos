@@ -17,7 +17,7 @@ public class EmpleadoController {
         this.empleadoLogica = empleadoLogica;
     }
 
-    @GetMapping(path = "/empleado")
+    @GetMapping(value = "secured",path = "/empleado")
     public List<Empleado> mostrarEmpleados() {
         return empleadoLogica.obtenerEmpleados();
     }

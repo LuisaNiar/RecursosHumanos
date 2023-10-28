@@ -31,6 +31,8 @@ dependencies {
     testCompileOnly("org.projectlombok:lombok:1.18.28")
     testAnnotationProcessor("org.projectlombok:lombok:1.18.28")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    implementation("org.springframework.boot:spring-boot-starter-security:3.1.4")
+
 
 }
 
@@ -62,3 +64,4 @@ sonarqube {
     }
 
 }
+
