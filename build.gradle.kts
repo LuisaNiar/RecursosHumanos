@@ -62,13 +62,11 @@ tasks.jacocoTestReport {
 
 tasks.withType<JacocoReport> {
 
-    classDirectories.setFrom(
-            sourceSets.main.get().output.asFileTree.matching {
-                exclude("**/config/**")
-                exclude("**/dto/**")
-                exclude("**/persistencia/**")
-            }
-    )
+    classDirectories.setFrom(sourceSets.main.get().output.asFileTree.matching {
+        exclude("**/config/**")
+        exclude("**/dto/**")
+        exclude("**/persistencia/**")
+    })
 }
 
 
@@ -80,13 +78,13 @@ jacoco {
 sonarqube {
 
     properties {
-
         property("sonar.recursoshumanos", "yms-gate")
-
     }
 }
 
 pitest {
     junit5PluginVersion.set("1.0.0")
+    mutators.set(setOf("STRONGER"))
     outputFormats.set(setOf("XML", "HTML"))
+    excludedClasses.set(setOf("*.config.*", "*.dto.*", "*.persistencia.*"))
 }
