@@ -24,10 +24,8 @@ public class EmpleadoController {
 
     @GetMapping(path = "/empleado")
     public List<Empleado> mostrarEmpleados() {
-
         logger.info("Mostrar Empleado");
         return empleadoLogica.obtenerEmpleados();
-
     }
 
     @PostMapping(path = "/empleado/agregar")
@@ -41,6 +39,16 @@ public class EmpleadoController {
             return new RespuestaDTO("Empleado no se pudo guardar " + e.getMessage());
         }
 
+    }
+
+    @PutMapping(path = "/empleado/actualizar/{id}")
+    public RespuestaDTO actualizarEmpleado(@RequestBody EmpleadoDTO empleadoDTO, @PathVariable int id) {
+        try {
+            empleadoLogica.actualizarEmpleado(empleadoDTO, id);
+            return new RespuestaDTO("Empleado actualizado correctamente");
+        } catch (IllegalArgumentException e) {
+            return new RespuestaDTO("Empleado no se pudo actualizar " + e.getMessage());
+        }
     }
 
     @RequestMapping(path = "/empleado/eliminar/{id}", method = RequestMethod.DELETE)
