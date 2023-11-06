@@ -25,7 +25,7 @@ public class PerfilEmpleadoController {
 
     @GetMapping(path = "/empleado/perfilesempleados")
     public List<PerfilEmpleado> mostrarPerfilesEmpleados() {
-        logger.info("Mostrar Perfil Empleados");
+        logger.info("Mostrar Perfil Empleados. ");
         return perfilEmpleadoLogica.obtenerPerfilesEmpleados();
     }
 
