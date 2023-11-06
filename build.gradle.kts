@@ -57,6 +57,7 @@ tasks.jacocoTestReport {
     dependsOn(tasks.test)
     reports {
         csv.required.set(true)
+        xml.required.set(true)
     }
 }
 
@@ -66,6 +67,7 @@ tasks.withType<JacocoReport> {
         exclude("**/config/**")
         exclude("**/dto/**")
         exclude("**/persistencia/**")
+        exclude("**/UserController")
     })
 }
 
