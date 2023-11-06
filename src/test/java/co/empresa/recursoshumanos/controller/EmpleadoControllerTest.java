@@ -27,23 +27,22 @@ import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 @WebAppConfiguration
-
 class EmpleadoControllerTest {
 
-    private  final static String BASE_URL = "/empleado";
+    private final static String BASE_URL = "/empleado";
     MockMvc mocMvc;
     @Autowired
     private WebApplicationContext webApplicationContext;
 
     @BeforeEach
-    void serUp(){
-        mocMvc= MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
+    void serUp() {
+        mocMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
     }
 
     @Test
     void mostrarEmpleados() throws Exception {
         MvcResult mockMvcResult = mocMvc.perform(MockMvcRequestBuilders.get(BASE_URL).accept(MediaType.APPLICATION_JSON_VALUE)).andReturn();
-        assertEquals(200,mockMvcResult.getResponse().getStatus());
+        assertEquals(200, mockMvcResult.getResponse().getStatus());
     }
 
     @Test
@@ -54,11 +53,11 @@ class EmpleadoControllerTest {
     }
 
     private String mapToJson(Object object) throws JsonProcessingException {
-        ObjectMapper mapper= new ObjectMapper();
+        ObjectMapper mapper = new ObjectMapper();
         return mapper.writeValueAsString(object);
     }
 
-    private EmpleadoDTO buildEmpleadoDTO(){
+    private EmpleadoDTO buildEmpleadoDTO() {
         EmpleadoDTO empleadoDTO = new EmpleadoDTO();
         empleadoDTO.setNombre("carlos");
         empleadoDTO.setApellido("barrera");

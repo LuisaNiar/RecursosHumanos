@@ -1,10 +1,7 @@
 package co.empresa.recursoshumanos.controller;
 
 import co.empresa.recursoshumanos.logica.CertificadoLogica;
-import co.empresa.recursoshumanos.logica.EmpleadoLogica;
 import co.empresa.recursoshumanos.persistencia.Certificado;
-import co.empresa.recursoshumanos.persistencia.CertificadoRepository;
-import co.empresa.recursoshumanos.persistencia.Empleado;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
