@@ -43,6 +43,8 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5:1.9.10")
     testCompileOnly("org.projectlombok:lombok:1.18.28")
+    implementation ("org.slf4j:slf4j-api:1.7.32")
+    implementation ("ch.qos.logback:logback-classic:1.2.9")
 }
 
 tasks.withType<Test> {
