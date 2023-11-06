@@ -14,13 +14,13 @@ public class PerfilEmpleado {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int ID;
+    private int id;
 
     @Column
-    private int Tiempo;
+    private int tiempo;
 
     @Column
-    private String Habilidades;
+    private String habilidades;
 
     @JoinColumn(name = "id_empleado")
     @OneToOne(fetch = FetchType.LAZY)

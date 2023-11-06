@@ -18,31 +18,36 @@ repositories {
     mavenCentral()
 }
 
-
-
 dependencies {
 
+    val pitestVersion = "1.15.0"
+    val mysqlVersion = "8.0.32"
+    val jacksonVersion = "2.15.2"
+    val springbootstarterVersion = "3.1.2"
+    val springfoxVersion = "3.0.0"
+    val springbootstarterSecurityVersion = "3.1.4"
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.pitest:pitest:1.15.0")
-    implementation("mysql:mysql-connector-java:8.0.32")
-    runtimeOnly("com.h2database:h2")
-    implementation("com.fasterxml.jackson.core:jackson-annotations:2.15.2")
-    implementation("org.springframework.boot:spring-boot-starter:3.1.2")
-    implementation("io.springfox:springfox-boot-starter:3.0.0")
-    implementation("io.springfox:springfox-swagger2:3.0.0")
-    implementation("io.springfox:springfox-swagger-ui:3.0.0")
-    implementation("org.springframework.boot:spring-boot-starter-security:3.1.4")
+    implementation("org.pitest:pitest:$pitestVersion")
+    implementation("mysql:mysql-connector-java:$mysqlVersion")
+    implementation("com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion")
+    implementation("org.springframework.boot:spring-boot-starter:$springbootstarterVersion")
+    implementation("io.springfox:springfox-boot-starter:$springfoxVersion")
+    implementation("io.springfox:springfox-swagger2:$springfoxVersion")
+    implementation("io.springfox:springfox-swagger-ui:$springfoxVersion")
+    implementation("org.springframework.boot:spring-boot-starter-security:$springbootstarterSecurityVersion")
 
-    annotationProcessor("org.projectlombok:lombok:1.18.28")
-    compileOnly("org.projectlombok:lombok:1.18.28")
+    val lombokVersion = "1.18.28"
+    val junit5Version = "1.2.0"
+    val kotlintestVersion = "1.9.10"
+    annotationProcessor("org.projectlombok:lombok:$lombokVersion")
+    compileOnly("org.projectlombok:lombok:$lombokVersion")
     runtimeOnly("com.h2database:h2")
-    pitest("org.pitest:pitest-junit5-plugin:1.2.0")
-
-    testAnnotationProcessor("org.projectlombok:lombok:1.18.28")
+    pitest("org.pitest:pitest-junit5-plugin:$junit5Version")
+    testAnnotationProcessor("org.projectlombok:lombok:$lombokVersion")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5:1.9.10")
-    testCompileOnly("org.projectlombok:lombok:1.18.28")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5:$kotlintestVersion")
+    testCompileOnly("org.projectlombok:lombok:$lombokVersion")
 }
 
 tasks.withType<Test> {
@@ -77,10 +82,12 @@ jacoco {
     toolVersion = "0.8.8"
 }
 
-sonarqube {
-
-    properties {
-        property("sonar.recursoshumanos", "yms-gate")
+allprojects {
+    sonarqube {
+        properties {
+            property("sonar.recursoshumanos", "yms-gate")
+            property("sonar.coverage.jacoco.xmlReportPaths", "**/build/reports/jacoco/test/jacocoTestReport.xml")
+        }
     }
 }
 

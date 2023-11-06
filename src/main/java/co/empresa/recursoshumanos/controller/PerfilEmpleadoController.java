@@ -1,10 +1,7 @@
 package co.empresa.recursoshumanos.controller;
 
-import co.empresa.recursoshumanos.logica.CertificadoLogica;
 import co.empresa.recursoshumanos.logica.PerfilEmpleadoLogica;
-import co.empresa.recursoshumanos.persistencia.Certificado;
 import co.empresa.recursoshumanos.persistencia.PerfilEmpleado;
-import co.empresa.recursoshumanos.persistencia.PerfilEmpleadoRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

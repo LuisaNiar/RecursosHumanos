@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public class PerfilEmpleadoLogica {
 
-    public PerfilEmpleadoRepository perfilEmpleadoRepository;
+    private PerfilEmpleadoRepository perfilEmpleadoRepository;
 
     public PerfilEmpleadoLogica(PerfilEmpleadoRepository perfilEmpleadoRepository) {
         this.perfilEmpleadoRepository = perfilEmpleadoRepository;
