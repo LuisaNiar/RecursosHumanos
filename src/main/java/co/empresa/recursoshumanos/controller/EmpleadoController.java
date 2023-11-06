@@ -42,6 +42,17 @@ public class EmpleadoController {
         }
 
     }
+    @PutMapping(path = "/empleado/actualizar/{id}")
+    public RespuestaDTO actualizarEmpleado(@RequestBody EmpleadoDTO empleadoDTO, @PathVariable int id) {
+        try {
+            logger.info("Se actualizo Empleado");
+            empleadoLogica.actualizarEmpleado(empleadoDTO, id);
+            return new RespuestaDTO("Empleado actualizado correctamente");
+        } catch (IllegalArgumentException e) {
+            logger.info("no se pudo actualizar empleado");
+            return new RespuestaDTO("Empleado no se pudo actualizar " + e.getMessage());
+        }
+    }
 
     @RequestMapping(path = "/empleado/eliminar/{id}", method = RequestMethod.DELETE)
     public RespuestaDTO eliminarEmpleado(@PathVariable int id) {
