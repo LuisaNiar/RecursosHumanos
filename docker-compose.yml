@@ -1,0 +1,16 @@
+version: "3"
+services:
+  my-web-app-db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=clave
+      - MYSQL_DATABASE=prueba
+  my-web-app:
+    build: .
+    ports:
+      - "8083:8083"
+    depends_on:
+      - my-web-app-db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3307/prueba
+      SPRING_DATASOURCE_PASSWORD: System.getenv('ACCESS_PASS')

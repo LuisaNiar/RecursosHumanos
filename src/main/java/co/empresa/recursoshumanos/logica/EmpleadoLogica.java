@@ -58,7 +58,6 @@ public class EmpleadoLogica {
     public Empleado eliminarEmpleado(int id) {
         Optional<Empleado> empleado = this.empleadoRepository.findById(id);
         Empleado empleadoEliminado = empleado.orElse(null);
-        assert empleadoEliminado != null;
         empleadoEliminado.setEliminado(true);
         empleadoRepository.save(empleadoEliminado);
         return empleadoEliminado;

@@ -1,7 +1,5 @@
 package co.empresa.recursoshumanos.logica;
 
-import co.empresa.recursoshumanos.persistencia.Certificado;
-import co.empresa.recursoshumanos.persistencia.CertificadoRepository;
 import co.empresa.recursoshumanos.persistencia.PerfilEmpleado;
 import co.empresa.recursoshumanos.persistencia.PerfilEmpleadoRepository;
 import org.junit.jupiter.api.Test;
@@ -28,11 +26,11 @@ class PerfilEmpleadoLogicaTest {
     @Test
     void Cuando_invoque_obtenerPerfilesEmpleados_entonces_da_1() {
         PerfilEmpleado perf = new PerfilEmpleado();
-        perf.setID(1);
+        perf.setId(1);
         ArrayList<PerfilEmpleado> value = new ArrayList<>();
         value.add(perf);
         Mockito.when(repository.findAll()).thenReturn(value);
         List<PerfilEmpleado> perfiles = logica.obtenerPerfilesEmpleados();
-        assertEquals(1, perfiles.get(0).getID());
+        assertEquals(1, perfiles.get(0).getId());
     }
 }
