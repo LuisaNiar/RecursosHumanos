@@ -25,7 +25,7 @@ dependencies {
     val jacksonVersion = "2.15.2"
     val springbootstarterVersion = "3.1.2"
     val springfoxVersion = "3.0.0"
-    val springbootstarterSecurityVersion = "3.1.4"
+    val springbootstarterSecurityVersion = "3.1.5"
     val slf4jVersion = "1.7.32"
     val logbackVersion = "1.2.9"
     implementation("org.springframework.boot:spring-boot-starter-web")
