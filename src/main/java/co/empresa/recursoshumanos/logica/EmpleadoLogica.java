@@ -5,8 +5,11 @@ import co.empresa.recursoshumanos.persistencia.Empleado;
 import co.empresa.recursoshumanos.persistencia.EmpleadoRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 @Service
 public class EmpleadoLogica {
@@ -18,7 +21,15 @@ public class EmpleadoLogica {
     }
 
     public List<Empleado> obtenerEmpleados() {
-        return empleadoRepository.findAll();
+        List<Empleado> listaEmpleados = new ArrayList<Empleado>(empleadoRepository.findAll());
+        Predicate<Empleado> predicate = new Predicate<Empleado>() {
+            @Override
+            public boolean test(Empleado empleado) {
+                return !empleado.isEliminado();
+            }
+        };
+
+        return listaEmpleados.stream().filter(predicate).collect(Collectors.toList());
     }
 
     public Empleado guardarEmpleado(EmpleadoDTO empleadoDTO) {

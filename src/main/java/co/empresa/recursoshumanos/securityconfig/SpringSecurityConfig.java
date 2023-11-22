@@ -11,16 +11,18 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SpringSecurityConfig extends GlobalAuthenticationConfigurerAdapter {
 
     @Override
-    public void init(AuthenticationManagerBuilder auth) throws Exception{
+    public void init(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-                .withUser("Sumit").password("PlayJava").roles("USER");
+                .withUser("admin").password("{noop}admin").roles("ADMIN");
     }
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
-        http.authorizeRequests().antMatchers("/secured").hasRole("USER")
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http.authorizeRequests().antMatchers("/secured").hasRole("ADMIN")
                 .and().httpBasic();
+        http.csrf().disable();
         return http.build();
+
     }
 
 }

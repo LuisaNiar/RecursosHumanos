@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @Slf4j
 public class EmpleadoController {
@@ -45,21 +46,23 @@ public class EmpleadoController {
     public RespuestaDTO actualizarEmpleado(@RequestBody EmpleadoDTO empleadoDTO, @PathVariable int id) {
         try {
             empleadoLogica.actualizarEmpleado(empleadoDTO, id);
+            logger.info("Se actualizo Empleado");
             return new RespuestaDTO("Empleado actualizado correctamente");
         } catch (IllegalArgumentException e) {
+            logger.info("No se pudo actualizar Empleado");
             return new RespuestaDTO("Empleado no se pudo actualizar " + e.getMessage());
         }
     }
 
-    @RequestMapping(path = "/empleado/eliminar/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(path = "/empleado/eliminar/{id}")
     public RespuestaDTO eliminarEmpleado(@PathVariable int id) {
         try {
-            logger.info("Se elimino Empleado");
             empleadoLogica.eliminarEmpleado(id);
-            return new RespuestaDTO("Empleado eliminado correctamente");
+            logger.info("Se elimino Empleado");
+            return new RespuestaDTO("Empleado actualizado correctamente");
         } catch (IllegalArgumentException e) {
-            logger.error("No se pudo eliminar Empleado");
-            return new RespuestaDTO("Empleado no se pudo eliminar " + e.getMessage());
+            logger.info("No se pudo eliminar Empleado");
+            return new RespuestaDTO("Empleado no se pudo actualizar " + e.getMessage());
         }
     }
 
