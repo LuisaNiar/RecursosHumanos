@@ -8,8 +8,4 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class RecursoshumanosApplicationTest {
 
-    @Test
-    void main() {
-        assertDoesNotThrow(() -> RecursoshumanosApplication.main(new String[]{}));
-    }
 }

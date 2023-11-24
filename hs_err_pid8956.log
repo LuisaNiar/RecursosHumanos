@@ -1,0 +1,222 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 58720256 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3536), pid=8956, tid=17456
+#
+# JRE version:  (19.0.2+7) (build )
+# Java VM: OpenJDK 64-Bit Server VM (19.0.2+7-FR, mixed mode, emulated-client, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:TieredStopAtLevel=1 -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -Dmanagement.endpoints.jmx.exposure.include=* -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.5\lib\idea_rt.jar=60611:C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.5\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 co.empresa.recursoshumanos.RecursoshumanosApplication
+
+Host: AMD Ryzen 3 2300U with Radeon Vega Mobile Gfx  , 4 cores, 3G,  Windows 10 , 64 bit Build 19041 (10.0.19041.3570)
+Time: Fri Nov 24 14:51:24 2023 SA Pacific Standard Time elapsed time: 0.126807 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001683757dfd0):  JavaThread "Unknown thread" [_thread_in_vm, id=17456, stack(0x00000013e3100000,0x00000013e3200000)]
+
+Stack: [0x00000013e3100000,0x00000013e3200000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6d034a]
+V  [jvm.dll+0x880f10]
+V  [jvm.dll+0x88289e]
+V  [jvm.dll+0x882f43]
+V  [jvm.dll+0x27b4bb]
+V  [jvm.dll+0x6cd13a]
+V  [jvm.dll+0x6c1d3a]
+V  [jvm.dll+0x351969]
+V  [jvm.dll+0x359076]
+V  [jvm.dll+0x3ad28a]
+V  [jvm.dll+0x3ad4cf]
+V  [jvm.dll+0x3261ea]
+V  [jvm.dll+0x3270a2]
+V  [jvm.dll+0x84d530]
+V  [jvm.dll+0x3ba241]
+V  [jvm.dll+0x82f013]
+V  [jvm.dll+0x43a3c3]
+V  [jvm.dll+0x43bdf1]
+C  [jli.dll+0x519f]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17344]
+C  [ntdll.dll+0x526b1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffb7ad6ace8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000168375bac80 WorkerThread "GC Thread#0" [stack: 0x00000013e3200000,0x00000013e3300000] [id=13100]
+  0x00000168375c3390 ConcurrentGCThread "G1 Main Marker" [stack: 0x00000013e3300000,0x00000013e3400000] [id=20780]
+  0x00000168375c3cd0 WorkerThread "G1 Conc#0" [stack: 0x00000013e3400000,0x00000013e3500000] [id=18524]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffb7a5075f7]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000016837579290] Heap_lock - owner thread: 0x000001683757dfd0
+
+Heap address: 0x00000000c8a00000, size: 886 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 12 size 40 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x00000000c8a00000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffb7a8f8059]
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.109 Loaded shared library C:\Users\lufer\.jdks\corretto-19.0.2\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff7f5300000 - 0x00007ff7f530d000 	C:\Users\lufer\.jdks\corretto-19.0.2\bin\java.exe
+0x00007ffbc2a90000 - 0x00007ffbc2c87000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffbc0c20000 - 0x00007ffbc0cdd000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffbc0410000 - 0x00007ffbc0706000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffbc0950000 - 0x00007ffbc0a50000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffbb9140000 - 0x00007ffbb9155000 	C:\Users\lufer\.jdks\corretto-19.0.2\bin\VCRUNTIME140.dll
+0x00007ffbb9200000 - 0x00007ffbb9217000 	C:\Users\lufer\.jdks\corretto-19.0.2\bin\jli.dll
+0x00007ffbc0ce0000 - 0x00007ffbc0e7e000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffbc0a50000 - 0x00007ffbc0a72000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffba6320000 - 0x00007ffba65ba000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.3570_none_60bb2a3971f3e41a\COMCTL32.dll
+0x00007ffbc2670000 - 0x00007ffbc269c000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffbc1750000 - 0x00007ffbc17ee000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffbc0210000 - 0x00007ffbc032a000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffbc0170000 - 0x00007ffbc020d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffbc0b80000 - 0x00007ffbc0bb0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffba1920000 - 0x00007ffba19bb000 	C:\Users\lufer\.jdks\corretto-19.0.2\bin\msvcp140.dll
+0x00007ffb7a1d0000 - 0x00007ffb7aea9000 	C:\Users\lufer\.jdks\corretto-19.0.2\bin\server\jvm.dll
+0x00007ffbc2260000 - 0x00007ffbc230e000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffbc2950000 - 0x00007ffbc29ec000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffbc2820000 - 0x00007ffbc2946000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffbb6c10000 - 0x00007ffbb6c37000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffbb74b0000 - 0x00007ffbb74ba000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffbb1e60000 - 0x00007ffbb1e69000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffbc19d0000 - 0x00007ffbc1a3b000 	C:\WINDOWS\System32\ws2_32.DLL
+0x00007ffbbe9d0000 - 0x00007ffbbe9e2000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffbb9340000 - 0x00007ffbb934a000 	C:\Users\lufer\.jdks\corretto-19.0.2\bin\jimage.dll
+0x00007ffbbdeb0000 - 0x00007ffbbe094000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffbad1d0000 - 0x00007ffbad204000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffbc0380000 - 0x00007ffbc0402000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffbb92f0000 - 0x00007ffbb92fe000 	C:\Users\lufer\.jdks\corretto-19.0.2\bin\instrument.dll
+0x00007ffbb19c0000 - 0x00007ffbb19e6000 	C:\Users\lufer\.jdks\corretto-19.0.2\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\lufer\.jdks\corretto-19.0.2\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.3570_none_60bb2a3971f3e41a;C:\Users\lufer\.jdks\corretto-19.0.2\bin\server
+
+VM Arguments:
+jvm_args: -XX:TieredStopAtLevel=1 -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -Dmanagement.endpoints.jmx.exposure.include=* -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.5\lib\idea_rt.jar=60611:C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.5\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 
+java_command: co.empresa.recursoshumanos.RecursoshumanosApplication
+java_class_path (initial): C:\Users\lufer\Documents\Codigo\build\classes\java\main;C:\Users\lufer\Documents\Codigo\build\resources\main;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.projectlombok\lombok\1.18.28\a2ff5da8bcd8b1b26f36b806ced63213362c6dcc\lombok-1.18.28.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-web\2.7.15\80f227f160fd83e4d3e1fb10ec59530e4faae1e0\spring-boot-starter-web-2.7.15.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-data-jpa\2.7.15\93fe758d2f6fdda6ec5494a984c980164f529486\spring-boot-starter-data-jpa-2.7.15.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.pitest\pitest\1.15.0\46e117b5f3edb5af7734607277a8bcf378ef79f5\pitest-1.15.0.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\io.springfox\springfox-boot-starter\3.0.0\5486365e263f8acca014b97efa50c3419d58e8f6\springfox-boot-starter-3.0.0.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\io.springfox\springfox-swagger2\3.0.0\7bcb18d496576eff76ef7bb72684e149cbb75c1d\springfox-swagger2-3.0.0.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.15.2\4724a65ac8e8d156a24898d50fd5dbd3642870b8\jackson-annotations-2.15.2.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-security\3.1.5\5609ddc1b11034278ca1174bfef45d0bea96f060\spring-boot-starter-security-3.1.5.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter\3.1.2\c09a48df6fbc2b07b7aef1256b45260a3478b49f\spring-boot-starter-3.1.2.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\io.springfox\springfox-swagger-ui\3.0.0\1e665fbe22148f7c36fa8a08e515a0047cd4390b\springfox-swagger-ui-3.0.0.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-classic\1.2.9\7d495522b08a9a66084bf417e70eedf95ef706bc\logback-classic-1.2.9.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.32\cdcff33940d9f2de763bc41ea05a0be5941176c3\slf4j-api-1.7.32.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-json\2.7.15\6d1bc45796a194b253ab98fbaf608e320bb16c\spring-boot-starter-json-2.7.15.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-tomcat\2.7.15\85a01164a2ceafb4ba1b9398bb99f4dd55e02499\spring-boot-starter-tomcat-2.7.15.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework\spring-webmvc\5.3.29\fdaefee29fcb8459aab748b571d8bb7bb7fdb175\spring-webmvc-5.3.29.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework\spring-web\5.3.29\4cd333e48d9a05d05c05ae7426242ecfe4cfb681\spring-web-5.3.29.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-aop\2.7.15\190b2d96cec2be49e686089d349dbc1f0d382b5a\spring-boot-starter-aop-2.7.15.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-jdbc\2.7.15\928b5c89be10d4485944a3bfc16f9951ac678138\spring-boot-starter-jdbc-2.7.15.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.data\spring-data-jpa\2.7.15\9bf899ee43404d9d81c178ed5381d31ddf438a51\spring-data-jpa-2.7.15.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\jakarta.transaction\jakarta.transaction-api\1.3.3\c4179d48720a1e87202115fbed6089bdc4195405\jakarta.transaction-api-1.3.3.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\jakarta.persistence\jakarta.persistence-api\2.2.3\8f6ea5daedc614f07a3654a455660145286f024e\jakarta.persistence-api-2.2.3.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.hibernate\hibernate-core\5.6.15.Final\ab14b7cef1fdff654ca81923048a6034d6c7cfa7\hibernate-core-5.6.15.Final.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aspects\5.3.29\dbcf1c1ce847b0fb186b5dde18968c9a46900f28\spring-aspects-5.3.29.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\com.mysql\mysql-connector-j\8.0.33\9e64d997873abc4318620264703d3fdb6b02dd5a\mysql-connector-j-8.0.33.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\io.springfox\springfox-oas\3.0.0\e7bc9c1319cf1b64ae714a249c3db3b8fe01e42b\springfox-oas-3.0.0.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\io.springfox\springfox-data-rest\3.0.0\40f5e834d6696ae1d3212fa5a2d5e1ec406bedc0\springfox-data-rest-3.0.0.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\io.springfox\springfox-bean-validators\3.0.0\80c646fdebe5f2b2b337a5a686e540fee0b7304f\springfox-bean-validators-3.0.0.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.plugin\spring-plugin-metadata\2.0.0.RELEASE\6fb3a1fc0f05dc826687b7686ad8a5960ecdd57c\spring-plugin-metadata-2.0.0.RELEASE.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.plugin\spring-plugin-core\2.0.0.RELEASE\95fc8c13037630f4aba9c51141f535becec00fe6\spring-plugin-core-2.0.0.RELEASE.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\com.fasterxml\classmate\1.5.1\3fe0bed568c62df5e89f4f174c101eab25345b6c\classmate-1.5.1.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\io.springfox\springfox-swagger-common\3.0.0\2e2fae840984cfcabfd50e1b4b1c23422135ba12\springfox-swagger-common-3.0.0.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\io.swagger\swagger-models\1.5.20\fb3a23bad80c5ed84db9dd150db2cba699531458\swagger-models-1.5.20.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\io.springfox\springfox-spring-webmvc\3.0.0\7ed22363fdfd651cd811c0b2391f16bddb91db8b\springfox-spring-webmvc-3.0.0.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\io.springfox\springfox-spring-web\3.0.0\a76f2fbe805bfd2798e20dc8f2cfbfad554d52da\springfox-spring-web-3.0.0.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\io.springfox\springfox-spring-webflux\3.0.0\efccbcfe1d23f2ba520bd87cc156bf2b81f3568e\springfox-spring-webflux-3.0.0.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\io.springfox\springfox-schema\3.0.0\32c5d6965617830ef6480fadb9030008945bcd9c\springfox-schema-3.0.0.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\io.springfox\springfox-spi\3.0.0\bae0b820d4b5a922063d34a42aaf4f763308b828\springfox-spi-3.0.0.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\io.swagger\swagger-annotations\1.5.20\16051f93ce11ca489a5313775d825f82fcc2cd6c\swagger-annotations-1.5.20.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.security\spring-security-web\5.7.10\9c3445fe7b5933f856e1b8237d5f2a74a30c61d1\spring-security-web-5.7.10.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.security\spring-security-config\5.7.10\a70c03d16c209b836006ed1b58b5818286bfee00\spring-security-config-5.7.10.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aop\5.3.29\397c588ce63ba4c185a8c1bd2f1e9139075b3bf1\spring-aop-5.3.29.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-logging\2.7.15\1f4bece73c6e002fd0c113de552a746ab603b9be\spring-boot-starter-logging-2.7.15.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-autoconfigure\2.7.15\ca07c5ec0347342e207de3d26c0b686d43be60d5\spring-boot-autoconfigure-2.7.15.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot\2.7.15\4e09424cc410ca255bbea2657a8da0b54b381b2a\spring-boot-2.7.15.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\jakarta.annotation\jakarta.annotation-api\1.3.5\59eb84ee0d616332ff44aba065f3888cf002cd2d\jakarta.annotation-api-1.3.5.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework\spring-core\5.3.29\528eafe4cef7bccf3df290dd99ac5833a9756183\spring-core-5.3.29.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.yaml\snakeyaml\1.30\8fde7fe2586328ac3c68db92045e1c8759125000\snakeyaml-1.30.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-core\1.2.12\1d8e51a698b138065d73baefb4f94531faa323cb\logback-core-1.2.12.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\2.13.5\1278f38160812811c56eb77f67213662ed1c7a2e\jackson-datatype-jdk8-2.13.5.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\2.13.5\8ba3b868e81d7fc6ead686bd2353859b111d9eaf\jackson-datatype-jsr310-2.13.5.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.module\jackson-module-parameter-names\2.13.5\a401a99e7a45450fd3ef76e82ba39005fd1a8c22\jackson-module-parameter-names-2.13.5.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.13.5\aa95e46dbc32454f3983221d420e78ef19ddf844\jackson-databind-2.13.5.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-websocket\9.0.79\83925f42600d5698157257844d741b88b5473230\tomcat-embed-websocket-9.0.79.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-core\9.0.79\8f0c76a7a4e1a6a3b2aff045db155be2f7fd3391\tomcat-embed-core-9.0.79.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-el\9.0.79\c7209c2094ed866c71748beb8a2b57a2f2ffd249\tomcat-embed-el-9.0.79.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework\spring-context\5.3.29\c374a72716d19220ca142efaab910adf5717c5d0\spring-context-5.3.29.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework\spring-beans\5.3.29\be40f557f3fa52c703f00e127ff639f8cf499617\spring-beans-5.3.29.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework\spring-expression\5.3.29\44ac795a057c4a6360063801c54a2d148e5a2808\spring-expression-5.3.29.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.aspectj\aspectjweaver\1.9.7\158f5c255cd3e4408e795b79f7c3fbae9b53b7ca\aspectjweaver-1.9.7.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\com.zaxxer\HikariCP\4.0.3\107cbdf0db6780a065f895ae9d8fbf3bb0e1c21f\HikariCP-4.0.3.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework\spring-jdbc\5.3.29\25c0b36f780af98b2d3b554e9a6258ac599b6115\spring-jdbc-5.3.29.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.data\spring-data-commons\2.7.15\6ceffb255c54c0ade79acc67e64724a1d83a5366\spring-data-commons-2.7.15.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework\spring-orm\5.3.29\83953e2af9c1848227239b4695c7596a0f112da3\spring-orm-5.3.29.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework\spring-tx\5.3.29\dd26c6e31db036c3f96c24e8ff3b769a00dfc999\spring-tx-5.3.29.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.hibernate.common\hibernate-commons-annotations\5.1.2.Final\e59ffdbc6ad09eeb33507b39ffcf287679a498c8\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.jboss.logging\jboss-logging\3.4.3.Final\c4bd7e12a745c0e7f6cf98c45cdcdf482fd827ea\jboss-logging-3.4.3.Final.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy\1.12.23\d470526e8c4566c04e9ae5d3ccb62d1a7aa58986\byte-buddy-1.12.23.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\antlr\antlr\2.7.7\83cd2cd674a217ade95a4bb83a8a14f351f48bd0\antlr-2.7.7.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.jboss\jandex\2.4.2.Final\1e1c385990b258ff1a24c801e84aebbacf70eb39\jandex-2.4.2.Final.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.8\c90a335a07c60db986f29d35b0f8ac0a18f0f989\jaxb-runtime-2.3.8.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\io.swagger.core.v3\swagger-models\2.1.2\e7edeed6456a16d707542c003af03a594ecafe3a\swagger-models-2.1.2.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\io.springfox\springfox-core\3.0.0\7c3367ce577c8acd9bf64c74488c9269253516c9\springfox-core-3.0.0.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\io.swagger.core.v3\swagger-annotations\2.1.2\d407a33aa71444802c640080eb4d5f499b027f96\swagger-annotations-2.1.2.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\io.github.classgraph\classgraph\4.8.83\7be289f451cedf9e35ed97caba3953226b4e6d9\classgraph-4.8.83.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.security\spring-security-core\5.7.10\2cfe7d1ae22eff5d18c86f00feae346789ec14\spring-security-core-5.7.10.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-to-slf4j\2.17.2\17dd0fae2747d9a28c67bc9534108823d2376b46\log4j-to-slf4j-2.17.2.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.slf4j\jul-to-slf4j\1.7.36\ed46d81cef9c412a88caef405b58f93a678ff2ca\jul-to-slf4j-1.7.36.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework\spring-jcl\5.3.29\4f84fbeec60adb1a50734b6077836e53844f0134\spring-jcl-5.3.29.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.13.5\d07c97d3de9ea658caf1ff1809fd9de930a286a\jackson-core-2.13.5.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\jakarta.xml.bind\jakarta.xml.bind-api\2.3.3\48e3b9cfc10752fba3521d6511f4165bea951801\jakarta.xml.bind-api-2.3.3.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\txw2\2.3.8\66e0297f1196f0d15a776e699de1b8e6ac5d44dd\txw2-2.3.8.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\com.sun.istack\istack-commons-runtime\3.0.12\cbbe1a62b0cc6c85972e99d52aaee350153dc530\istack-commons-runtime-3.0.12.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.springframework.security\spring-security-crypto\5.7.10\5a2c4107b2287c654d82f2d6fec7a9683dfeb35c\spring-security-crypto-5.7.10.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.17.2\f42d6afa111b4dec5d2aea0fe2197240749a4ea6\log4j-api-2.17.2.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\com.h2database\h2\2.1.214\d5c2005c9e3279201e12d4776c948578b16bf8b2\h2-2.1.214.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\org.mapstruct\mapstruct\1.3.1.Final\6ab184bbc7a7029738277a244e4c535fcdc3f558\mapstruct-1.3.1.Final.jar;C:\Users\lufer\.gradle\caches\modules-2\files-2.1\com.sun.activation\jakarta.activation\1.2.2\74548703f9851017ce2f556066659438019e7eb5\jakarta.activation-1.2.2.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 58720256                                  {product} {ergonomic}
+     bool ManagementServer                         = true                                      {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 929038336                                 {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 0                                      {pd product} {ergonomic}
+     bool ProfileInterpreter                       = false                                  {pd product} {command line}
+    uintx ProfiledCodeHeapSize                     = 0                                      {pd product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 929038336                              {manageable} {ergonomic}
+     intx TieredStopAtLevel                        = 1                                         {product} {command line}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\lufer\AppData\Local\Microsoft\WindowsApps;C:\Users\lufer\AppData\Roaming\npm
+USERNAME=lufer
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 17 Stepping 0, AuthenticAMD
+TMP=C:\Users\lufer\AppData\Local\Temp
+TEMP=C:\Users\lufer\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.3570)
+OS uptime: 11 days 8:09 hours
+
+CPU: total 4 (initial active 4) (4 cores per cpu, 1 threads per core) family 23 model 17 stepping 0 microcode 0x0, cx8, cmov, fxsr, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, rdtscp
+
+Memory: 4k page, system-wide physical 3539M (84M free)
+TotalPageFile size 14291M (AvailPageFile size 85M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 46M, peak: 102M
+
+vm_info: OpenJDK 64-Bit Server VM (19.0.2+7-FR) for windows-amd64 JRE (19.0.2+7-FR), built on Jan 13 2023 22:53:32 by "Administrator" with MS VC++ 15.9 (VS2017)
+
+END.
