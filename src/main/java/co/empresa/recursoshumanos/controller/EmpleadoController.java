@@ -4,12 +4,11 @@ import co.empresa.recursoshumanos.controller.dto.EmpleadoDTO;
 import co.empresa.recursoshumanos.controller.dto.RespuestaDTO;
 import co.empresa.recursoshumanos.logica.EmpleadoLogica;
 import co.empresa.recursoshumanos.persistencia.Empleado;
-import co.empresa.recursoshumanos.persistencia.EmpleadoRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import java.util.ArrayList;
+
 import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:3000")
@@ -19,6 +18,7 @@ public class EmpleadoController {
 
     private EmpleadoLogica empleadoLogica;
     private static final Logger logger = LoggerFactory.getLogger(EmpleadoController.class);
+
     public EmpleadoController(EmpleadoLogica empleadoLogica) {
         this.empleadoLogica = empleadoLogica;
     }

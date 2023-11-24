@@ -21,13 +21,8 @@ public class EmpleadoLogica {
     }
 
     public List<Empleado> obtenerEmpleados() {
-        List<Empleado> listaEmpleados = new ArrayList<Empleado>(empleadoRepository.findAll());
-        Predicate<Empleado> predicate = new Predicate<Empleado>() {
-            @Override
-            public boolean test(Empleado empleado) {
-                return !empleado.isEliminado();
-            }
-        };
+        List<Empleado> listaEmpleados = new ArrayList(empleadoRepository.findAll());
+        Predicate<Empleado> predicate = empleado -> !empleado.isEliminado();
 
         return listaEmpleados.stream().filter(predicate).collect(Collectors.toList());
     }
