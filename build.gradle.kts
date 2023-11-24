@@ -28,6 +28,8 @@ dependencies {
     val springbootstarterSecurityVersion = "3.1.5"
     val slf4jVersion = "1.7.32"
     val logbackVersion = "1.2.9"
+    val outh2 = "2.5.0.RELEASE"
+    val jsonToken = "2.1.1"
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.pitest:pitest:$pitestVersion")
@@ -38,15 +40,19 @@ dependencies {
     implementation("io.springfox:springfox-swagger2:$springfoxVersion")
     implementation("io.springfox:springfox-swagger-ui:$springfoxVersion")
     implementation("org.springframework.boot:spring-boot-starter-security:$springbootstarterSecurityVersion")
+    implementation("org.springframework.security.oauth:spring-security-oauth2:$outh2")
     implementation("org.slf4j:slf4j-api:$slf4jVersion")
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
+    implementation("org.openidentityplatform.commons:json-web-token:$jsonToken")
 
     val lombokVersion = "1.18.28"
     val junit5Version = "1.2.0"
     val kotlintestVersion = "1.9.10"
+    val jjwt = "0.12.3"
     annotationProcessor("org.projectlombok:lombok:$lombokVersion")
     compileOnly("org.projectlombok:lombok:$lombokVersion")
     runtimeOnly("com.h2database:h2")
+    runtimeOnly("io.jsonwebtoken:jjwt-impl:$jjwt")
     pitest("org.pitest:pitest-junit5-plugin:$junit5Version")
     testAnnotationProcessor("org.projectlombok:lombok:$lombokVersion")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
@@ -101,3 +107,4 @@ pitest {
     outputFormats.set(setOf("XML", "HTML"))
     excludedClasses.set(setOf("*.config.*", "*.dto.*", "*.persistencia.*"))
 }
+
