@@ -53,6 +53,7 @@ class EmpleadoControllerTest {
         assertEquals(200, mockMvcResult.getResponse().getStatus());
     }
 
+
     private String mapToJson(Object object) throws JsonProcessingException {
         ObjectMapper mapper= new ObjectMapper();
         return mapper.writeValueAsString(object);
