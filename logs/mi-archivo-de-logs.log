@@ -5022,3 +5022,499 @@ Caused by: java.lang.IllegalArgumentException: defaultTarget must start with '/'
 03:25:10.060 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 03:25:10.132 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 03:25:10.163 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+03:43:59.647 [main] INFO  c.e.r.RecursoshumanosApplication - Starting RecursoshumanosApplication using Java 17.0.9 on DESKTOP-D5965V8 with PID 30204 (C:\Users\lufer\IdeaProjects\recursoshumanos\build\classes\java\main started by lufer in C:\Users\lufer\IdeaProjects\recursoshumanos)
+03:43:59.651 [main] INFO  c.e.r.RecursoshumanosApplication - No active profile set, falling back to 1 default profile: "default"
+03:44:00.576 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+03:44:00.654 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
+03:44:01.399 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+03:44:01.409 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+03:44:01.412 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+03:44:01.412 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.79]
+03:44:01.547 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+03:44:01.547 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1843 ms
+03:44:01.752 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+03:44:02.059 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+03:44:02.115 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+03:44:02.212 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+03:44:02.490 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+03:44:02.688 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+03:44:03.524 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+03:44:03.534 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+03:44:04.063 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+03:44:04.473 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@738ae785, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@13288174, org.springframework.security.web.context.SecurityContextPersistenceFilter@718e700c, org.springframework.security.web.header.HeaderWriterFilter@1a4c6e74, org.springframework.web.filter.CorsFilter@24ae2183, org.springframework.security.web.authentication.logout.LogoutFilter@3ca564aa, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@51c15508, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@10c1682b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2cf97875, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b697993, org.springframework.security.web.session.SessionManagementFilter@28705150, org.springframework.security.web.access.ExceptionTranslationFilter@6cb2b947, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1dba7721]
+03:44:04.716 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+03:44:04.753 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+03:44:04.947 [main] INFO  c.e.r.RecursoshumanosApplication - Started RecursoshumanosApplication in 5.865 seconds (JVM running for 7.045)
+03:44:06.555 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+03:44:06.555 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+03:44:06.556 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+03:44:06.593 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:44:10.353 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+03:44:13.932 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:44:17.849 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:44:17.863 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:44:19.672 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:44:19.679 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:45:33.156 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:45:34.841 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:45:34.846 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:45:36.125 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:45:36.132 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:45:37.457 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:45:37.466 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:45:38.796 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:45:38.812 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:46:34.424 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:46:34.434 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:48:32.896 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:48:35.259 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:48:35.265 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:49:02.786 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:53:12.409 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:53:12.414 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:53:14.854 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:53:14.858 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:53:16.828 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:53:16.832 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:56:58.750 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:56:58.758 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:58:08.848 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:58:08.858 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:58:11.310 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:58:11.314 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:58:11.940 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:58:11.946 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:58:33.797 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+03:58:33.801 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:01:51.876 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:01:51.881 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:04:03.001 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:04:03.007 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:05:18.769 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+04:05:18.770 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+04:05:18.774 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+04:05:18.775 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+04:05:44.033 [main] INFO  c.e.r.RecursoshumanosApplication - Starting RecursoshumanosApplication using Java 17.0.9 on DESKTOP-D5965V8 with PID 2080 (C:\Users\lufer\IdeaProjects\recursoshumanos\build\classes\java\main started by lufer in C:\Users\lufer\IdeaProjects\recursoshumanos)
+04:05:44.035 [main] INFO  c.e.r.RecursoshumanosApplication - No active profile set, falling back to 1 default profile: "default"
+04:05:44.609 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+04:05:44.649 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
+04:05:45.072 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+04:05:45.080 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+04:05:45.081 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+04:05:45.081 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.79]
+04:05:45.172 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+04:05:45.172 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1109 ms
+04:05:45.289 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+04:05:45.485 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+04:05:45.529 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+04:05:45.594 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+04:05:45.760 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+04:05:45.873 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+04:05:46.405 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+04:05:46.414 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+04:05:46.725 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+04:05:46.964 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5cbaafbd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f0f56f5, org.springframework.security.web.context.SecurityContextPersistenceFilter@174aabb2, org.springframework.security.web.header.HeaderWriterFilter@2cf97875, org.springframework.web.filter.CorsFilter@6edb093f, org.springframework.security.web.authentication.logout.LogoutFilter@6956081d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@eb66b47, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@678b3746, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45689582, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f5c4ff8, org.springframework.security.web.session.SessionManagementFilter@737ae41a, org.springframework.security.web.access.ExceptionTranslationFilter@5b5e45bc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@88e85a]
+04:05:47.120 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+04:05:47.136 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+04:05:47.275 [main] INFO  c.e.r.RecursoshumanosApplication - Started RecursoshumanosApplication in 3.477 seconds (JVM running for 4.021)
+04:05:53.278 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+04:05:53.278 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+04:05:53.279 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+04:05:53.535 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:05:54.462 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:05:55.953 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:06:47.592 [http-nio-8080-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+04:06:48.516 [http-nio-8080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+04:06:49.224 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+04:06:51.137 [http-nio-8080-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+04:07:43.499 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+04:08:13.744 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+04:08:14.683 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:08:14.710 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:08:14.715 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:08:17.993 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:08:18.012 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:08:18.018 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:09:17.954 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:09:17.973 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:09:17.979 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:09:20.509 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:09:20.529 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:09:20.535 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:10:18.845 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:10:24.964 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:10:24.968 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:14:49.477 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:14:49.497 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:14:49.502 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:26:16.048 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:26:16.070 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:26:16.077 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:26:20.894 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:26:20.916 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:26:20.921 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:27:28.738 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:27:28.743 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:28:29.856 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:28:29.863 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:29:48.639 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:29:48.661 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:29:48.666 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:29:49.057 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:30:03.376 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:30:03.381 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:30:52.570 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:30:52.575 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:30:55.358 [http-nio-8080-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+04:30:55.362 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+04:31:12.495 [http-nio-8080-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+04:31:12.573 [http-nio-8080-exec-9] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+04:31:26.938 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Se actualizo Empleado
+04:31:31.430 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:32:26.855 [http-nio-8080-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+04:32:29.903 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+04:32:29.903 [http-nio-8080-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+04:32:30.961 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+04:32:30.961 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+04:32:31.589 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+04:32:31.595 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+04:32:32.182 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+04:32:32.183 [http-nio-8080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+04:32:54.334 [http-nio-8080-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+04:32:54.338 [http-nio-8080-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+04:32:55.258 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+04:32:55.261 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+04:34:05.214 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Se actualizo Empleado
+04:34:06.209 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Se actualizo Empleado
+04:34:16.832 [http-nio-8080-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+04:35:11.481 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+04:35:11.482 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+04:35:11.485 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+04:35:11.486 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+04:35:14.431 [main] INFO  c.e.r.RecursoshumanosApplication - Starting RecursoshumanosApplication using Java 17.0.9 on DESKTOP-D5965V8 with PID 15092 (C:\Users\lufer\IdeaProjects\recursoshumanos\build\classes\java\main started by lufer in C:\Users\lufer\IdeaProjects\recursoshumanos)
+04:35:14.433 [main] INFO  c.e.r.RecursoshumanosApplication - No active profile set, falling back to 1 default profile: "default"
+04:35:15.033 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+04:35:15.074 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.
+04:35:15.478 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+04:35:15.484 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+04:35:15.485 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+04:35:15.485 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.79]
+04:35:15.570 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+04:35:15.570 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1099 ms
+04:35:15.677 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+04:35:15.823 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+04:35:15.856 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+04:35:15.894 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+04:35:16.015 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+04:35:16.107 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+04:35:16.570 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+04:35:16.577 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+04:35:16.893 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+04:35:17.140 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@23a78d2e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20724c21, org.springframework.security.web.context.SecurityContextPersistenceFilter@38dc1c50, org.springframework.security.web.header.HeaderWriterFilter@4c51fc9a, org.springframework.web.filter.CorsFilter@c0cb9c2, org.springframework.security.web.authentication.logout.LogoutFilter@570ede3b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@280f061e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40f931ec, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@528ef230, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@eb66b47, org.springframework.security.web.session.SessionManagementFilter@7be9e9fc, org.springframework.security.web.access.ExceptionTranslationFilter@29f86630, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6b7ebac1]
+04:35:17.294 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+04:35:17.313 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+04:35:17.457 [main] INFO  c.e.r.RecursoshumanosApplication - Started RecursoshumanosApplication in 3.404 seconds (JVM running for 3.992)
+04:35:24.521 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+04:35:24.522 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+04:35:24.522 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+04:35:24.551 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:35:27.753 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:35:29.048 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:35:29.749 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:35:30.357 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:35:31.998 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:35:42.419 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Se actualizo Empleado
+04:35:45.256 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:36:24.913 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:36:24.913 [http-nio-8080-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:36:37.503 [http-nio-8080-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:36:37.733 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:36:37.737 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:36:39.810 [http-nio-8080-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:36:39.814 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:36:44.173 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:36:44.181 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:36:45.814 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:36:45.819 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:36:59.910 [http-nio-8080-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:36:59.910 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:39:42.476 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:39:42.476 [http-nio-8080-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:39:55.191 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:39:55.937 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:39:55.960 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:39:55.966 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:39:59.898 [http-nio-8080-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:39:59.898 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:40:01.294 [http-nio-8080-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:40:01.954 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:40:01.972 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:40:01.978 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:42:20.178 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+04:42:20.178 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+04:42:20.181 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+04:42:20.183 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+04:42:22.875 [main] INFO  c.e.r.RecursoshumanosApplication - Starting RecursoshumanosApplication using Java 17.0.9 on DESKTOP-D5965V8 with PID 17884 (C:\Users\lufer\IdeaProjects\recursoshumanos\build\classes\java\main started by lufer in C:\Users\lufer\IdeaProjects\recursoshumanos)
+04:42:22.877 [main] INFO  c.e.r.RecursoshumanosApplication - No active profile set, falling back to 1 default profile: "default"
+04:42:23.423 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+04:42:23.459 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+04:42:23.842 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+04:42:23.848 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+04:42:23.849 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+04:42:23.849 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.79]
+04:42:23.931 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+04:42:23.931 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1021 ms
+04:42:24.035 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+04:42:24.185 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+04:42:24.219 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+04:42:24.255 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+04:42:24.373 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+04:42:24.463 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+04:42:24.907 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+04:42:24.914 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+04:42:25.222 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+04:42:25.456 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@39dee5fd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1b897ffb, org.springframework.security.web.context.SecurityContextPersistenceFilter@63ff861e, org.springframework.security.web.header.HeaderWriterFilter@12d28106, org.springframework.web.filter.CorsFilter@2ec258f1, org.springframework.security.web.authentication.logout.LogoutFilter@718e700c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@39f3285d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c7f8c25, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4110ffe5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3074575a, org.springframework.security.web.session.SessionManagementFilter@31428f76, org.springframework.security.web.access.ExceptionTranslationFilter@55c78556, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5cbebfba]
+04:42:25.612 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+04:42:25.627 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+04:42:25.764 [main] INFO  c.e.r.RecursoshumanosApplication - Started RecursoshumanosApplication in 3.14 seconds (JVM running for 3.688)
+04:42:45.908 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+04:42:45.908 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+04:42:45.909 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+04:42:45.936 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:42:48.427 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:42:49.357 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:42:50.079 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:42:50.687 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:42:53.569 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Se actualizo Empleado
+04:42:56.669 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:43:13.464 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:43:13.471 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:43:17.564 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:43:17.564 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:43:19.394 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:43:19.564 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:43:19.778 [http-nio-8080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:43:19.982 [http-nio-8080-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:43:21.059 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:43:21.079 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:43:21.086 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:46:07.856 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:46:21.067 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:46:21.072 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:46:22.728 [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /empleado/2
+04:46:22.731 [http-nio-8080-exec-4] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /empleado/2
+04:46:26.249 [http-nio-8080-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /empleado/2
+04:46:27.319 [http-nio-8080-exec-8] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /empleado/2
+04:46:28.964 [http-nio-8080-exec-9] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /empleado/2
+04:46:29.765 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:46:29.784 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:46:29.790 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:46:44.155 [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /empleado/2
+04:46:44.158 [http-nio-8080-exec-6] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /empleado/2
+04:48:45.259 [http-nio-8080-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:48:47.677 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:48:47.677 [http-nio-8080-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:48:48.637 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:48:48.637 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:48:49.332 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:48:49.339 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:49:33.814 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+04:49:33.877 [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+04:52:06.777 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+04:52:06.777 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+04:52:06.780 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+04:52:06.782 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+04:52:09.575 [main] INFO  c.e.r.RecursoshumanosApplication - Starting RecursoshumanosApplication using Java 17.0.9 on DESKTOP-D5965V8 with PID 26184 (C:\Users\lufer\IdeaProjects\recursoshumanos\build\classes\java\main started by lufer in C:\Users\lufer\IdeaProjects\recursoshumanos)
+04:52:09.578 [main] INFO  c.e.r.RecursoshumanosApplication - No active profile set, falling back to 1 default profile: "default"
+04:52:10.187 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+04:52:10.229 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.
+04:52:10.680 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+04:52:10.687 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+04:52:10.688 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+04:52:10.689 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.79]
+04:52:10.776 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+04:52:10.776 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1163 ms
+04:52:10.895 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+04:52:11.053 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+04:52:11.089 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+04:52:11.128 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+04:52:11.258 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+04:52:11.358 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+04:52:11.840 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+04:52:11.848 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+04:52:12.180 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+04:52:12.433 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4accc3de, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a23136f, org.springframework.security.web.context.SecurityContextPersistenceFilter@7e864fa4, org.springframework.security.web.header.HeaderWriterFilter@29f86630, org.springframework.web.filter.CorsFilter@23a78d2e, org.springframework.security.web.authentication.logout.LogoutFilter@476dc0af, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5b697993, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@38dc1c50, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ccea4be, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20724c21, org.springframework.security.web.session.SessionManagementFilter@72fa021, org.springframework.security.web.access.ExceptionTranslationFilter@6715a6da, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1cf7c055]
+04:52:12.602 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+04:52:12.622 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+04:52:12.773 [main] INFO  c.e.r.RecursoshumanosApplication - Started RecursoshumanosApplication in 3.457 seconds (JVM running for 4.013)
+04:52:20.395 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+04:52:20.395 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+04:52:20.396 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+04:52:20.424 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:52:23.812 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:52:24.467 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:52:25.269 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+04:52:27.221 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:52:29.358 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Se actualizo Empleado
+04:52:32.069 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:52:39.834 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Se actualizo Empleado
+04:52:41.625 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Se actualizo Empleado
+04:52:43.014 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Se actualizo Empleado
+04:52:43.697 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Se actualizo Empleado
+04:52:44.094 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Se actualizo Empleado
+04:52:50.563 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Se actualizo Empleado
+04:52:52.909 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+04:53:05.366 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Se actualizo Empleado
+04:53:26.413 [http-nio-8080-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+04:53:26.413 [http-nio-8080-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+05:02:50.485 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:02:50.490 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:04:46.248 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:04:46.256 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:04:48.103 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:04:48.111 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:04:50.182 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:04:50.186 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:04:52.171 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+05:04:52.193 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:04:52.197 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:04:56.907 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+05:04:56.931 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:04:56.936 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:06:12.297 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:06:20.193 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+05:06:20.220 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:06:20.225 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:06:36.245 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:06:36.255 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:06:51.506 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:06:51.511 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:08:44.967 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Se actualizo Empleado
+05:08:44.995 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:08:45.001 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:08:54.071 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Se actualizo Empleado
+05:08:54.094 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:08:54.099 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:13:58.393 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:13:59.510 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:13:59.514 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:14:16.068 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:14:16.072 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:14:24.824 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+05:14:24.847 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:14:24.852 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:14:27.708 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+05:14:27.712 [http-nio-8080-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+05:15:25.795 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Se actualizo Empleado
+05:15:25.820 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:15:25.825 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:15:28.868 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Se actualizo Empleado
+05:15:28.894 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:15:28.898 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:18:06.478 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+05:18:06.478 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+05:18:06.481 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+05:18:06.483 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+05:18:09.076 [main] INFO  c.e.r.RecursoshumanosApplication - Starting RecursoshumanosApplication using Java 17.0.9 on DESKTOP-D5965V8 with PID 29032 (C:\Users\lufer\IdeaProjects\recursoshumanos\build\classes\java\main started by lufer in C:\Users\lufer\IdeaProjects\recursoshumanos)
+05:18:09.078 [main] INFO  c.e.r.RecursoshumanosApplication - No active profile set, falling back to 1 default profile: "default"
+05:18:09.617 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+05:18:09.654 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+05:18:10.042 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+05:18:10.048 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+05:18:10.049 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+05:18:10.049 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.79]
+05:18:10.132 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+05:18:10.132 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1026 ms
+05:18:10.237 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+05:18:10.383 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+05:18:10.418 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+05:18:10.453 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+05:18:10.570 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+05:18:10.660 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+05:18:11.105 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+05:18:11.112 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+05:18:11.418 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05:18:11.655 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@23a78d2e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20724c21, org.springframework.security.web.context.SecurityContextPersistenceFilter@38dc1c50, org.springframework.security.web.header.HeaderWriterFilter@4c51fc9a, org.springframework.web.filter.CorsFilter@c0cb9c2, org.springframework.security.web.authentication.logout.LogoutFilter@570ede3b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@280f061e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40f931ec, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@528ef230, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@eb66b47, org.springframework.security.web.session.SessionManagementFilter@7be9e9fc, org.springframework.security.web.access.ExceptionTranslationFilter@29f86630, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6b7ebac1]
+05:18:11.807 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+05:18:11.825 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+05:18:11.977 [main] INFO  c.e.r.RecursoshumanosApplication - Started RecursoshumanosApplication in 3.133 seconds (JVM running for 3.662)
+05:18:27.469 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+05:18:27.470 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+05:18:27.471 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+05:18:27.731 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+05:18:27.823 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+05:18:28.092 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+05:18:29.434 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:19:55.404 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:19:55.409 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:20:04.713 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+05:20:04.738 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:20:04.775 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:20:07.014 [http-nio-8080-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+05:20:07.027 [http-nio-8080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public co.empresa.recursoshumanos.controller.dto.RespuestaDTO co.empresa.recursoshumanos.controller.EmpleadoController.actualizarEmpleado(co.empresa.recursoshumanos.controller.dto.EmpleadoDTO,int)]
+05:20:07.885 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Se actualizo Empleado
+05:20:07.911 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:20:07.917 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:21:36.940 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:25:54.851 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:25:57.902 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Se elimino Empleado
+05:26:50.608 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:38:42.213 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:38:42.220 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:38:43.091 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:38:43.098 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:38:45.071 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:38:45.119 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:40:45.011 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:40:45.016 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:47:36.321 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:47:36.327 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:47:37.419 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:47:37.423 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:48:02.771 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:48:04.150 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:48:04.154 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:48:04.787 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:48:04.791 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:48:35.852 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:48:35.856 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:49:29.846 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:49:32.008 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:49:32.012 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:49:32.884 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:49:32.892 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:49:33.470 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:49:33.478 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:50:17.173 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:50:17.176 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:50:36.054 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:50:36.057 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:50:49.424 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:50:49.428 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:52:02.435 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:52:24.618 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:52:24.621 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:52:31.845 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:52:31.849 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:52:55.930 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:52:55.935 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:54:50.637 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:55:53.356 [http-nio-8080-exec-4] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:55:53.359 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:55:54.096 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:55:54.100 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:57:02.565 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:57:03.806 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:57:03.809 [http-nio-8080-exec-2] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:57:07.086 [http-nio-8080-exec-1] INFO  c.e.r.controller.EmpleadoController - Se elimino Empleado
+05:57:07.089 [http-nio-8080-exec-3] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:57:11.503 [http-nio-8080-exec-5] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+05:57:11.521 [http-nio-8080-exec-6] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:57:11.525 [http-nio-8080-exec-7] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:57:13.052 [http-nio-8080-exec-8] INFO  c.e.r.controller.EmpleadoController - Se agrego Empleado
+05:57:13.070 [http-nio-8080-exec-9] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:57:13.074 [http-nio-8080-exec-10] INFO  c.e.r.controller.EmpleadoController - Mostrar Empleado
+05:57:22.933 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+05:57:22.933 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+05:57:22.936 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+05:57:22.937 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
