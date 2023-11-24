@@ -42,7 +42,7 @@ public class EmpleadoController {
 
     }
 
-    @PutMapping(path = "/empleado/actualizar/{id}")
+    @RequestMapping(path = "/empleado/actualizar/{id}")
     public RespuestaDTO actualizarEmpleado(@RequestBody EmpleadoDTO empleadoDTO, @PathVariable int id) {
         try {
             empleadoLogica.actualizarEmpleado(empleadoDTO, id);
